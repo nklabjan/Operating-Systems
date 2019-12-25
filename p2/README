@@ -1,0 +1,28 @@
+Included:
+	Source Files: main.c, queue.c, reader.c, munch1.c, munch2.c, writer.c
+	Header Files: queue.h, reader.h, munch1.h, munch2.h, writer.h
+	Makefile
+	README
+
+Running Program:
+	Running the program is rather easy due to the functionality of the Makefile. As a command line 	prompt, type “make scan-build” and that will compile all source files into one executable called “prodcomm” while also displaying an errors or warnings within the program. 	Next, just type “prodcomm < INPUT.TXT” and program will run. 
+
+Program Goal:
+	To write a program that actually runs in parallel on Linux using threads (pthreads) and synchronization.
+
+Program Arguments:
+	Program is reading line by line from standard input. 
+
+Program Flow:
+	main.c: This file contains the main() function, which is ultimately called to start the program. Within the main() function, three different queues are created and then four different threads are called for reader, munch1, munch2, and  	  writer.  Following those threads, statistics of each queue are printed.
+
+	queue.c: This file is the implementation of the queue data structure. It contains CreateStringQueue(), which initializes and declares the queue, EnqueueString(), which adds a string tot he queue, and DequeueString(), which removes
+		     a string from he queue.
+
+	reader.c: This file reads from standard input and adds each string from the standard input into the “first” queue. 
+
+	munch1.c: This file scans through the “first” queue and replaces each space character (not tabs or newlines) with an asterisk ("*") character. It then passes the line to thread Munch2 through the “second” queue of character strings.
+
+	munch2.c: This file scans through the “second” queue and replaces each lowercase letter with the same character, but in uppercase. It then passes the line to thread  writer through the “third” queue of character strings.
+
+	writer.c: This file reads through the “third” queue and prints it out to standard output.

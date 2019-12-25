@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Nick_Klabjan/Documents/Classes/OperatingSystems(CS537)/p1/main.c
+stdio.h
+-
+parser.c
+/Users/Nick_Klabjan/Documents/Classes/OperatingSystems(CS537)/p1/parser.c
+
+/Users/Nick_Klabjan/Documents/Classes/OperatingSystems(CS537)/p1/p1.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+
+/Users/Nick_Klabjan/Documents/Classes/OperatingSystems(CS537)/p1/parser.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+ctype.h
+-
+string.h
+-
+dirent.h
+-
+p1.c
+/Users/Nick_Klabjan/Documents/Classes/OperatingSystems(CS537)/p1/p1.c
+
